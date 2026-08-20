@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function index(){
-        return "Show products";
+        return view('product.index');
     }
     public function create(){
-        return "For to create a product";
+        return view('product.create');
     }
     public function show($idProduct){
-        return "detail of a product: $idProduct";
+        return view ('product.show', compact('idProduct'));
     }
 }
