@@ -9,14 +9,7 @@
 </head>
 <body>
 
-    <header>
-        <h1>Glow & Pink</h1>
-        <nav>
-            <span>Inicio</span>
-            <span>Catálogo</span>
-            <span>Crear Producto</span>
-        </nav>
-    </header>
+    @include('layout.header')
 
     <main class="container">
 
@@ -24,9 +17,6 @@
 
     </main>
 
-    <footer>
-        <p>&copy; 2026 Glow & Pink Makeup. Todos los derechos reservados.</p>
-    </footer>
-
+    @include('layout.footer')
 </body>
 </html>
