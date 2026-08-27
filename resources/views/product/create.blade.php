@@ -1,24 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glow & Pink - Crear Producto</title>
-    <link rel="stylesheet" href="{{asset('css/estilos.css')}}">
+@extends('layout.app')
 
-</head>
-<body>
-
-    <header>
-        <h1>Glow & Pink</h1>
-        <nav>
-            <span>Inicio</span>
-            <span>Catálogo</span>
-            <span>Crear Producto</span>
-        </nav>
-    </header>
-
-    <main>
+@section('content')
         <section class="form-container">
             <h2>Registrar Nuevo Producto</h2>
             
@@ -70,11 +52,5 @@
                 <button type="button" class="btn-submit">Guardar Producto</button>
             </form>
         </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Glow & Pink Makeup. Todos los derechos reservados.</p>
-    </footer>
-
-</body>
-</html>
+@endsection 
+    

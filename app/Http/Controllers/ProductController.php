@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+  
     public function index(){
         return view('product.index');
     }
@@ -13,6 +14,6 @@ class ProductController extends Controller
         return view('product.create');
     }
     public function show($idProduct){
-        return view ('product.show', compact('idProduct'));
+        return view('product.show', compact('idProduct'));
     }
 }

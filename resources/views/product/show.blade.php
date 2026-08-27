@@ -1,28 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glow & Pink - Dior Addict Lip Glow</title>
-    <link rel="stylesheet" href="{{asset('css/estilos.css')}}">
+@extends('layout.app')
 
-</head>
-<body>
-
-    <header>
-        <h1>Glow & Pink</h1>
-        <nav>
-            <span>Inicio</span>
-            <span>Catálogo</span>
-            <span>Crear Producto</span>
-        </nav>
-    </header>
-
-    <main>
-        <section class="product-detail-container">
+@section('content')
+           <section class="product-detail-container">
             <!-- Columna de la Imagen -->
             <div class="product-image-box">
-                <img src="https://m.media-amazon.com/images/I/51-2yGjD30L._SL1000_.jpg" alt="Dior Addict Lip Glow">
+                <img src="https://beautyface.com.co/cdn/shop/files/239985621.webp?v=1774384814&width=1024" alt="Dior Addict Lip Glow">
             </div>
 
             <!-- Columna de Información -->
@@ -46,11 +28,5 @@
                 </button>
             </div>
         </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Glow & Pink Makeup. Todos los derechos reservados.</p>
-    </footer>
-
-</body>
-</html>
+@endsection
+   
