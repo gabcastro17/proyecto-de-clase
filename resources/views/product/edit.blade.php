@@ -4,26 +4,22 @@
 
 <section class="form-container">
 
-    <h2>Registrar Nuevo Producto</h2>
+    <h2>Editar Producto</h2>
 
-    <form action="/product" method="POST">
+    <form action="{{ url('/product/'.$producto->id) }}" method="POST">
 
         @csrf
-
-        <!-- Nombre -->
+        @method('PUT')
 
         <div class="form-group">
 
-            <label for="nombre">
-                Nombre del Producto:
-            </label>
+            <label for="nombre">Nombre del Producto:</label>
 
             <input
                 type="text"
                 id="nombre"
                 name="name"
-                placeholder="Ej. Labial Mate Rosa Pastel"
-                value="{{ old('name') }}"
+                value="{{ old('name', $producto->name) }}"
             >
 
             @error('name')
@@ -34,22 +30,16 @@
 
         </div>
 
-
-        <!-- Precio -->
-
         <div class="form-group">
 
-            <label for="precio">
-                Precio ($):
-            </label>
+            <label for="precio">Precio ($):</label>
 
             <input
                 type="number"
                 id="precio"
                 name="price"
                 step="0.01"
-                placeholder="0.00"
-                value="{{ old('price') }}"
+                value="{{ old('price', $producto->price) }}"
             >
 
             @error('price')
@@ -60,14 +50,9 @@
 
         </div>
 
-
-        <!-- Categoría -->
-
         <div class="form-group">
 
-            <label for="categoria">
-                Categoría:
-            </label>
+            <label for="categoria">Categoría:</label>
 
             <select id="categoria" name="category_id">
 
@@ -79,7 +64,7 @@
 
                     <option
                         value="{{ $categoria->id }}"
-                        {{ old('category_id') == $categoria->id ? 'selected' : '' }}
+                        {{ old('category_id', $producto->category_id) == $categoria->id ? 'selected' : '' }}
                     >
                         {{ $categoria->name }}
                     </option>
@@ -96,20 +81,14 @@
 
         </div>
 
-
-        <!-- Descripción -->
-
         <div class="form-group">
 
-            <label for="descripcion">
-                Descripción:
-            </label>
+            <label for="descripcion">Descripción:</label>
 
             <textarea
                 id="descripcion"
                 name="description"
-                placeholder="Escribe los detalles, beneficios e ingredientes del producto..."
-            >{{ old('description') }}</textarea>
+            >{{ old('description', $producto->description) }}</textarea>
 
             @error('description')
                 <small style="color:red;">
@@ -119,11 +98,8 @@
 
         </div>
 
-
-        <!-- Botón -->
-
         <button type="submit" class="btn-submit">
-            Guardar Producto
+            Actualizar Producto
         </button>
 
     </form>
